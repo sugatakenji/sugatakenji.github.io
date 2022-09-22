@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<link href="http://fonts.cdnfonts.com/css/matrix" rel="stylesheet">
+		<style>
+			h1{
+				font-family: 'Matrix', sans-serif;
+				text-align: center;
+				color: #00ff00;
+			}
+			body {
+				background-color: black;
+				font-size: 25px;
+				margin: 0; 
+			}
+		</style>
+	</head>
+	<body>
+		<h1>LEOPOLDO KENJI SUGATA NAVES</h1>
+		<div class="flex-container">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+</div>
+		<script src="js/three.js"></script>
+		<script>
+			const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.1, 1000 );
+			
+
+
+			const renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			canvas = document.body.appendChild( renderer.domElement );
+
+			const loader = new THREE.TextureLoader();
+			const material = new THREE.MeshBasicMaterial({
+						map: loader.load('texture/img.png'),
+			});
+			
+			
+			const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+			
+			const cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+
+			camera.position.z = 5;
+
+			function animate() {
+				requestAnimationFrame( animate );
+
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+
+				renderer.render( scene, camera );
+			};
+
+			animate();
+		</script>
+	</body>
+</html>
