@@ -1,0 +1,38 @@
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main {
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(12,1fr); 
+}
+
+h1 {
+  font-family: elevon, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: whitesmoke;
+  background-color: black;
+  grid-column: 4 / span 5;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+section {
+
+  grid-column: 8 / span 3;
+  color: whitesmoke;
+  background-color: black;
+  padding-left: 10px;
+  font-size: 1.25rem;
+  text-align: left;
+  line-height: 5px;
+  grid-row: 4 / 4;
+}
