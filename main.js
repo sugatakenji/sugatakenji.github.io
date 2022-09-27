@@ -24,7 +24,7 @@ const gridhelper = new THREE.GridHelper(200, 50);
 lightpoint.position.set(0,2,5);
 
 
-camera.position.setZ(0.2);
+camera.position.setZ(30);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 
@@ -59,12 +59,13 @@ var loaderTV = new GLTFLoader();
 loaderTV.load( 'assets/TV.glb', function ( gltf )
 {
     const tv = gltf.scene; 
-    tv.rotation.y = -3.14 / 2;
+    tv.rotation.y = -5.14 / 2;
     tv.position.y = -0.5;
     tv.position.z = -1.0;
+    
     //tv.position.x = -0.2;
     tv.scale.set(0.25, 0.25, 0.25);
-   //  scene.add(tv);
+     scene.add(tv);
 } );
 
 var loaderTELA = new GLTFLoader();
@@ -85,7 +86,7 @@ loaderTELA.load( 'assets/tela.glb', function ( gltf )
     tela.traverse((o) => {
       if (o.isMesh) o.material = videoMaterial;
     });
-    scene.add(tela);
+    //scene.add(tela);
 } );
 ///////////////////////////////////////
 
