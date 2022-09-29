@@ -2,23 +2,74 @@
 <html lang="ptbr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <!--<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My personal site</title>
+    <link rel="stylesheet" href="style.css">
   </head>
-  <video id="video" playsinline webkit-playsinline muted loop autoplay width="320" height="240" src="assets/Donkey_kong.mp4" style="display: none;"></video>
   <body>
-    
+    <audio id="audio" autoplay muted loop>
+      <source src="vortexsound.mp3" type="audio/mpeg">
+    </audio>
+
     <canvas id="bg"></canvas>
+
+
     <main>
-      <h1>Eu sou processamento  gráfico</h1>
+      <header>
+        <h1>Eu sou processamento  gráfico</h1>
+      </header>
+
       <section>
-        <p>Nome: Leopoldo Kenji Sugata Naves</p>
-        <p>Nickname: Leop333</p>
+        <div class="link">
+          <IMG  src="perfil.gif">
+            <p>Nome: Leopoldo Kenji Sugata Naves</p>
+            <p>RA: 11201722022</p>
+          </IMG>
+        </div>
+        <div class="link">
+          <IMG  src="avatar.gif">
+            <p>Metahuman_model: Leop333</p>
+            <p>Serial_number: XXXXX-XXXXX</p>
+          </IMG>
+        </div>
       </section>
+      <h2 style="grid-column: 2 / span 4;">Meus jogos e filmes favoritos</h2>
+      <div id="videos">
+          <div class="column">
+            <video width="500" height="281" autoplay loop muted>
+              <source src="valorant.mp4" type="video/mp4">
+            </video>
+            <img src="Donkey_kong.gif">
+            <video width="500" height="281" autoplay loop muted>
+              <source src="tekken3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column">
+            <video width="500" height="281" autoplay loop muted>
+              <source src="Terminator 2.mp4" type="video/mp4">
+            </video>
+            <video width="500" height="281" autoplay loop muted>
+              <source src="Avatar .mp4" type="video/mp4">
+            </video>
+            <video width="500" height="281" autoplay loop muted>
+              <source src="matrix.mp4" type="video/mp4">
+            </video>
+          </div>
+      </div>
+
+      <p style="grid-column: 1/6;" id="descricao">  Minhas inspirações gráficas estão ligadas diretamente a esperiência audivisual que vivênciei quando criança e adolescente. 
+        Podemos ver Titulos classicos na lista, como Donkey Kong Country de snes, exterminador do futuro e tekken3. Outros são mais recentes como o Fps Valorant e o novo filme da franquia Avatar, de James Cameron. 
+      </p>
+
+
     </main>
-    <script type="module" src="/main.js"></script>
-    
+
+    <script src="./Three.js"></script>
+    <script src="main.js"></script>   
+
+
+
+
   </body>
 </html>
