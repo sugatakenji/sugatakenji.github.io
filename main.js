@@ -60,7 +60,7 @@ var tublight = new THREE.PointLight(0x005560, 100,);
 /////////////////////atualizando a posição do tubo//////
 var speed = 1;
 window.addEventListener("wheel", event => {
-  speed = event.deltaY/10;
+  speed = event.deltaY/event.deltaY;
 
 });
 
