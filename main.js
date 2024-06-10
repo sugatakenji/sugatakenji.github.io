@@ -1,6 +1,4 @@
-var audio = document.querySelector("#audio");
-audio.muted = false;
-audio.volume = 1;
+
 ////////////////Criando a Cena e o render/////////////
 const scene = new THREE.Scene();
 const camera =  new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 0.1, 1000);
